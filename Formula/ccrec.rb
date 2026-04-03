@@ -5,21 +5,21 @@
 class Ccrec < Formula
   desc "Convert Claude Code conversation transcripts to Markdown"
   homepage "https://github.com/capybara-translation/ccrec"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/capybara-translation/ccrec/releases/download/v0.6.0/ccrec_darwin_amd64.tar.gz"
-      sha256 "c10654240abff3fbd80c0233de0f795e58d9a487a347e10ae2f0cf557a012aa6"
+      url "https://github.com/capybara-translation/ccrec/releases/download/v0.7.0/ccrec_darwin_amd64.tar.gz"
+      sha256 "c38e687fa75742e1fd8844e6fdf0c2ca60058eac907d092101d8d495618fc630"
 
       define_method(:install) do
         bin.install "ccrec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/capybara-translation/ccrec/releases/download/v0.6.0/ccrec_darwin_arm64.tar.gz"
-      sha256 "6c49258714efd3519dc234f6d507187f94aee102ae8b179961ebeb41d84935aa"
+      url "https://github.com/capybara-translation/ccrec/releases/download/v0.7.0/ccrec_darwin_arm64.tar.gz"
+      sha256 "aeb7dbcf47b9b0f080c38b04e65b0b6c23c127d8260651c6954b32dd03a0a418"
 
       define_method(:install) do
         bin.install "ccrec"
@@ -29,15 +29,15 @@ class Ccrec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capybara-translation/ccrec/releases/download/v0.6.0/ccrec_linux_amd64.tar.gz"
-      sha256 "25422838284d38549f8268c8bd300bddb5f39d4d5eea059fd9dec9e8ee8e37ab"
+      url "https://github.com/capybara-translation/ccrec/releases/download/v0.7.0/ccrec_linux_amd64.tar.gz"
+      sha256 "1f95651976407430b0ec388f008c16da6f47eb243024694656e17f420128c521"
       define_method(:install) do
         bin.install "ccrec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capybara-translation/ccrec/releases/download/v0.6.0/ccrec_linux_arm64.tar.gz"
-      sha256 "53360a9fa05cd2930b9faabba019f78c991c5c53a996bd658f8d45ef488da35e"
+      url "https://github.com/capybara-translation/ccrec/releases/download/v0.7.0/ccrec_linux_arm64.tar.gz"
+      sha256 "5114d944131c620410250cbd313dae738049b02b8e7e7e4a938bdad4474be8a7"
       define_method(:install) do
         bin.install "ccrec"
       end
