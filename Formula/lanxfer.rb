@@ -5,21 +5,21 @@
 class Lanxfer < Formula
   desc "Send files directly between machines on your LAN"
   homepage "https://github.com/capybara-translation/lanxfer"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.1.0/lanxfer_darwin_amd64.tar.gz"
-      sha256 "a564abb069169b456ad5c6fe59d83f3f3c32c160246d9e069f8ea4f1f40f5719"
+      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.2.0/lanxfer_darwin_amd64.tar.gz"
+      sha256 "8938144b337dffbfeb8361eacf74565207cdcb3cd69b7e60112fed6885ac70f3"
 
       define_method(:install) do
         bin.install "lanxfer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.1.0/lanxfer_darwin_arm64.tar.gz"
-      sha256 "2b2b9eeec0d4bfb114ea8686809628000a4a58ea932ca9bfd33596e5919f287c"
+      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.2.0/lanxfer_darwin_arm64.tar.gz"
+      sha256 "b71da279269706660a1f8de126604d251d5a5ec1562866a900fa546f11bcae4a"
 
       define_method(:install) do
         bin.install "lanxfer"
@@ -29,15 +29,15 @@ class Lanxfer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.1.0/lanxfer_linux_amd64.tar.gz"
-      sha256 "245f88ad285c3674b09761eed2941045c6aa5b2b2bf1a557f166e29c7968180c"
+      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.2.0/lanxfer_linux_amd64.tar.gz"
+      sha256 "2a449bbea85f690ea57011492bbaed47a2d39c2f734218643c943e2b3791171e"
       define_method(:install) do
         bin.install "lanxfer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.1.0/lanxfer_linux_arm64.tar.gz"
-      sha256 "f787f262845b35c0acc03d14c4cdd161866696aa71d6e0421c4da467660a0f31"
+      url "https://github.com/capybara-translation/lanxfer/releases/download/v0.2.0/lanxfer_linux_arm64.tar.gz"
+      sha256 "6a35d9f3a41febb4f5fa505a5e777e9c3b85ae9f1bcc7bf06a3b983950acbff2"
       define_method(:install) do
         bin.install "lanxfer"
       end
