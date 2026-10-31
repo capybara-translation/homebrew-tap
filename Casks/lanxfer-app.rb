@@ -2,8 +2,8 @@
 # capybara-translation/lanxfer by gui/scripts/render-cask.sh on every release.
 # Do not edit it by hand; changes are overwritten.
 cask "lanxfer-app" do
-  version "0.8.0"
-  sha256 "14cefb941bd817d5f64991cdb35d2b3c5abbd9e0b5f8cfd93f7eac74c30bd115"
+  version "0.8.1"
+  sha256 "5a0fdb2fcc23fd393745d34989f7580c7079f939c55867bffe19a541a800c128"
 
   url "https://github.com/capybara-translation/lanxfer/releases/download/v#{version}/lanxfer-app_darwin_universal.zip"
   name "lanxfer"
