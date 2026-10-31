@@ -1,0 +1,32 @@
+# This file is generated from gui/build/darwin/lanxfer-app.rb.tmpl in
+# capybara-translation/lanxfer by gui/scripts/render-cask.sh on every release.
+# Do not edit it by hand; changes are overwritten.
+cask "lanxfer-app" do
+  version "0.8.0"
+  sha256 "14cefb941bd817d5f64991cdb35d2b3c5abbd9e0b5f8cfd93f7eac74c30bd115"
+
+  url "https://github.com/capybara-translation/lanxfer/releases/download/v#{version}/lanxfer-app_darwin_universal.zip"
+  name "lanxfer"
+  desc "Send files and messages directly between machines on your LAN"
+  homepage "https://github.com/capybara-translation/lanxfer"
+
+  livecheck do
+    skip "Auto-generated on release."
+  end
+
+  depends_on macos: :monterey
+
+  app "lanxfer.app"
+
+  postflight_steps do
+    # The app isn't signed or notarized. Homebrew quarantines cask downloads,
+    # so without this Gatekeeper refuses to open it.
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/lanxfer.app"]
+  end
+
+  # The app keeps running with its window closed and a second launch only
+  # raises it, so without this the old version would outlive an upgrade.
+  uninstall quit: "com.capybara-translation.lanxfer"
+
+  # No zap stanza: the history under the config folder is kept on purpose.
+end
